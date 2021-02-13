@@ -2,15 +2,6 @@ const { subEmail } = require("../../models/emails");
 
 const userIds = [
   {
-    id: 11,
-  },
-  {
-    id: 2,
-  },
-  {
-    id: 3,
-  },
-  {
     id: 15,
   },
   {
@@ -102,7 +93,6 @@ const userIds = [
   },
 ];
 
-let emailsArr = userIds.map((id) => {
-  subEmail({ sub: true, uid: id.id });
+userIds.map(async (id) => {
+  await subEmail({ sub: true, uid: id.id });
 });
-console.log(emailsArr);

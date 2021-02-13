@@ -5,7 +5,6 @@ const { sendEmail } = require("../models/nodemailer");
 
 router.post("/", async (req, res) => {
   const email = req.body;
-  console.log("this is email", email);
 
   let emailContent = email.to.join(", ");
 
