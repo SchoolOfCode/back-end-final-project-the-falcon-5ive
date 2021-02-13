@@ -91,6 +91,7 @@ async function createComments() {
 async function createEmail() {
   let res = await query(
     `CREATE TABLE emails(
+            emailId SERIAL PRIMARY KEY,
             sub BOOL,
             uid INTEGER
         )`

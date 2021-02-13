@@ -2,94 +2,156 @@ const { subEmail } = require("../../models/emails");
 
 const userIds = [
   {
-    id: 15,
+    sub: true,
+    uid: null,
   },
   {
-    id: 17,
+    sub: true,
+    uid: 76,
   },
   {
-    id: 19,
+    sub: false,
+    uid: 77,
   },
   {
-    id: 18,
+    sub: true,
+    uid: 3,
   },
   {
-    id: 20,
+    sub: true,
+    uid: 2,
   },
   {
-    id: 22,
+    sub: true,
+    uid: 1,
   },
   {
-    id: 21,
+    sub: true,
+    uid: 11,
   },
   {
-    id: 25,
+    sub: true,
+    uid: 20,
   },
   {
-    id: 23,
+    sub: true,
+    uid: 4,
   },
   {
-    id: 4,
+    sub: true,
+    uid: 15,
   },
   {
-    id: 24,
+    sub: true,
+    uid: 17,
   },
   {
-    id: 27,
+    sub: true,
+    uid: 18,
   },
   {
-    id: 29,
+    sub: true,
+    uid: 19,
   },
   {
-    id: 28,
+    sub: true,
+    uid: 20,
   },
   {
-    id: 26,
+    sub: true,
+    uid: 21,
   },
   {
-    id: 30,
+    sub: true,
+    uid: 22,
   },
   {
-    id: 31,
+    sub: true,
+    uid: 23,
   },
   {
-    id: 39,
+    sub: true,
+    uid: 24,
   },
   {
-    id: 33,
+    sub: true,
+    uid: 25,
   },
   {
-    id: 36,
+    sub: true,
+    uid: 26,
   },
   {
-    id: 37,
+    sub: true,
+    uid: 27,
   },
   {
-    id: 44,
+    sub: true,
+    uid: 28,
   },
   {
-    id: 35,
+    sub: true,
+    uid: 29,
   },
   {
-    id: 41,
+    sub: true,
+    uid: 30,
   },
   {
-    id: 43,
+    sub: true,
+    uid: 31,
   },
   {
-    id: 45,
+    sub: true,
+    uid: 33,
   },
   {
-    id: 51,
+    sub: true,
+    uid: 35,
   },
   {
-    id: 72,
+    sub: true,
+    uid: 36,
   },
   {
-    id: 68,
+    sub: true,
+    uid: 37,
   },
   {
-    id: 74,
+    sub: true,
+    uid: 39,
+  },
+  {
+    sub: true,
+    uid: 41,
+  },
+  {
+    sub: true,
+    uid: 43,
+  },
+  {
+    sub: true,
+    uid: 44,
+  },
+  {
+    sub: true,
+    uid: 45,
+  },
+  {
+    sub: true,
+    uid: 51,
+  },
+  {
+    sub: true,
+    uid: 68,
+  },
+  {
+    sub: true,
+    uid: 72,
+  },
+  {
+    sub: true,
+    uid: 74,
   },
 ];
 

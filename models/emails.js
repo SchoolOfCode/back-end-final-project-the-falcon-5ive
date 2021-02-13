@@ -37,10 +37,19 @@ async function gemtEmailSub() {
   return res.rows;
 }
 
+/*-----------DELETE: Email sub------------*/
+async function deleteEmailSub(id) {
+  const result = await query(`
+  DELETE FROM emails WHERE emailId=${id};
+  `);
+  console.log(result);
+}
+
 module.exports = {
   subEmail,
   patchSubEmail,
   gemtEmailSub,
+  deleteEmailSub,
 };
 
 // SELECT *

@@ -1,18 +1,18 @@
 const { query } = require("../index");
 
 /*-------------Drop Table Create Events Table-------------*/
-async function dropTableEvents() {
-  let res = await query(`DROP TABLE events`);
-  console.log(res);
-}
+// async function dropTableEvents() {
+//   let res = await query(`DROP TABLE events`);
+//   console.log(res);
+// }
 
 // dropTableEvents();
 
 /*-------------Drop Table Create Journey Table-------------*/
-async function dropTableJourney() {
-  let res = await query(`DROP TABLE journey`);
-  console.log(res);
-}
+// async function dropTableJourney() {
+//   let res = await query(`DROP TABLE journey`);
+//   console.log(res);
+// }
 
 // dropTableJourney();
 
@@ -25,9 +25,17 @@ async function dropTableJourney() {
 // dropTableUsers();
 
 /*-------------Drop Table Comments Table-------------*/
-async function dropTableComments() {
-  let res = await query(`DROP TABLE comments`);
+// async function dropTableComments() {
+//   let res = await query(`DROP TABLE comments`);
+//   console.log(res);
+// }
+
+// dropTableComments();
+
+/*-------------Drop Table Comments Table-------------*/
+async function dropTableEmails() {
+  let res = await query(`DROP TABLE emails`);
   console.log(res);
 }
 
-dropTableComments();
+dropTableEmails();
