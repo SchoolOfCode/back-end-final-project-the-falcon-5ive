@@ -3,7 +3,7 @@ const { query } = require("../db/index");
 /*-----------------------Comment-----------------------*/
 /*-----------POST: Email Sub------------*/
 async function subEmail(value) {
-  console.log("this is value in emails: ", value);
+  console.log("this is value in emails: ", value, " Value logging end");
   const res = await query(
     `
     INSERT INTO emails(
@@ -37,10 +37,19 @@ async function gemtEmailSub() {
   return res.rows;
 }
 
+/*-----------DELETE: Email sub------------*/
+async function deleteEmailSub(id) {
+  const result = await query(`
+  DELETE FROM emails WHERE emailId=${id};
+  `);
+  console.log(result);
+}
+
 module.exports = {
   subEmail,
   patchSubEmail,
   gemtEmailSub,
+  deleteEmailSub,
 };
 
 // SELECT *

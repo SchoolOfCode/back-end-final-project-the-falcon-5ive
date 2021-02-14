@@ -54,16 +54,24 @@ async function imageUpload(image) {
 /*-----------GET: All events------------*/
 async function getAllEvents() {
   const res = await query(`
-  SELECT * FROM events  LEFT JOIN users
-  ON Events.uid = users.id ORDER BY date ASC;
+  SELECT * FROM events LEFT JOIN users
+  ON Events.uid = users.id where date >= now()::date ORDER BY date ASC
   `);
+  console.log("this is get all events: ", res.rows);
   return res.rows;
 }
 
 /*-----------PATCH: Events Patch------------*/
 async function patchEvent(value, id) {
+  const uploaded = await cloudinary.uploader.upload(value.image, {
+    upload_preset: "falcon5iveImages",
+  });
+
   console.log("this is value: ", value);
   console.log("this is id: ", id);
+  if (value.date === "") {
+    value.date = null;
+  }
   const res = await query(
     `UPDATE events
       SET eventName = COALESCE($1, eventName),
@@ -88,7 +96,7 @@ async function patchEvent(value, id) {
       value.date,
       value.time,
       value.description,
-      value.image,
+      uploaded.public_id,
       value.location,
       value.enableVolunteers,
       value.attendingList,

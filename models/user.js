@@ -40,6 +40,7 @@ async function getAllUsers() {
           ON emails.uid = users.id
       ORDER BY cohort ASC, surname ASC`
   );
+
   return res.rows;
 }
 /*-----------GET: Users by Email Address------------*/
