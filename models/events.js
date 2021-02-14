@@ -54,9 +54,10 @@ async function imageUpload(image) {
 /*-----------GET: All events------------*/
 async function getAllEvents() {
   const res = await query(`
-  select * from events LEFT JOIN users
-  ON Events.uid = users.id where date > now() ORDER BY date ASC
+  SELECT * FROM events LEFT JOIN users
+  ON Events.uid = users.id where date >= now()::date ORDER BY date ASC
   `);
+  console.log("this is get all events: ", res.rows);
   return res.rows;
 }
 
