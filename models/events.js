@@ -65,6 +65,9 @@ async function getAllEvents() {
 async function patchEvent(value, id) {
   console.log("this is value: ", value);
   console.log("this is id: ", id);
+  if (value.date === "") {
+    value.date = null;
+  }
   const res = await query(
     `UPDATE events
       SET eventName = COALESCE($1, eventName),
