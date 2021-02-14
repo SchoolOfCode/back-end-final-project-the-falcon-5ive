@@ -63,6 +63,10 @@ async function getAllEvents() {
 
 /*-----------PATCH: Events Patch------------*/
 async function patchEvent(value, id) {
+  const uploaded = await cloudinary.uploader.upload(value.image, {
+    upload_preset: "falcon5iveImages",
+  });
+
   console.log("this is value: ", value);
   console.log("this is id: ", id);
   if (value.date === "") {
@@ -92,7 +96,7 @@ async function patchEvent(value, id) {
       value.date,
       value.time,
       value.description,
-      value.image,
+      uploaded.public_id,
       value.location,
       value.enableVolunteers,
       value.attendingList,
